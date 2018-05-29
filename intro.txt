@@ -1,0 +1,117 @@
+# created by Linus Torwalds
+
+1. comparing files--
+
+win
+
+    > fc new.html old.html
+
+linux/Mac
+
+    > diff -u new.html old.html
+    // -u is used for the clear readable output
+
+    ex. diff -u git_commit_id1 git_commit_id2
+
+
+2. Saving Versions
+    1. Saving manual copies     -editor -offline -manual save
+    2. Wikipedia           -no editor -online   -manual save
+    3. Dropbox             -editor -online      -automatic save
+    4. Google Docs         -editor -online      -automatic save
+    5. SVN                 -editor -online      -manual save
+
+3. History different version systems
+    CVS - concurrent version systems
+    SVN - Subversion
+
+
+4. Git saves the version for all the files in a repo for a commit of any single files
+
+    >git log --stat
+
+5. To copy from any other to your own comp files
+
+    > git clone https://github.com/yadavanurag/node-web
+
+6. To add colourfull command line output
+    > git config --global color.ui auto
+
+7. To find commit id which commit message has "intial commit"
+
+
+8. How many lines are added with any commit id
+
+
+9. How many lines are deleted with any commit id
+
+
+10. To revert to any commit
+    > git checkout commit_id
+
+11. To change the core editor for git
+
+    > git config --global core.editor "'C:\Program Files\Sublime Text 3\sublime_text.exe' -n -w"
+
+    -n = sublime will opne in new window
+    -w = git will wait for you to close sublime before you want to continue
+
+12. To initialize a folder to a git repo
+
+    > git init
+
+13. To compare the working directory and staging area just run git diff without any argument
+
+	> git diff
+
+14. To compare the staging area with commited repo
+
+	> git diff --staged
+
+
+
+
+                          ##################    BRANCH    #################
+                          master branch is deafult branch in git repo
+
+15. To find the branch name you currently in
+
+    > git branch
+
+16. To create a new branch in reop
+
+    > git branch new_branch_name
+
+17. To change to new_branch_name
+
+    > git checkout new_branch_name
+
+18. To merge two branch
+
+    > git merge first_branch second_branch
+
+    
+
+
+    	################### Syncing with Github
+
+First create a new repo in github account manually using web browser and add remote
+
+		### Adding remote
+
+
+19. To view remote existing
+	
+	> git remote
+
+	if output is empty means no remote yet
+
+20. To add remote 
+
+	> git remote add remote_name git@github.com/yadavanurag/repo_name.git
+
+21. To verify that url was added correctly 
+
+	> git remote -v
+
+	-v = verbose
