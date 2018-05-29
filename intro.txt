@@ -60,6 +60,14 @@ linux/Mac
 
     > git init
 
+#  To add git files to stage area
+
+	> git add file_name
+
+# To make git commit
+	
+	> git commit -m 'Commit to repo'
+
 13. To compare the working directory and staging area just run git diff without any argument
 
 	> git diff
@@ -115,3 +123,9 @@ First create a new repo in github account manually using web browser and add rem
 	> git remote -v
 
 	-v = verbose
+
+22. To send changes to remote
+
+	> git push remote_name branch_name
+
+	> git push origin master (branch on github will also be master)
