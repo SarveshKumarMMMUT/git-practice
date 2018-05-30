@@ -129,3 +129,45 @@ First create a new repo in github account manually using web browser and add rem
 	> git push remote_name branch_name
 
 	> git push origin master (branch on github will also be master)
+
+23. To pull changes to local repo
+
+	> git pull remote_name branch_name
+
+	> git pull origin master
+
+
+
+				######### Fork
+
+				copy repo from another git account to your own
+
+24. To fork just use browser and manullay click on fork button
+
+25. To pull changes to your own local computer
+
+	> git clone https://github.com/yadavanurag/forked_repo_name.git
+
+	#git automatically sets up a remote pointing to the reop you cloned from
+	#to check > git remote -v
+
+>git pull origin master is equal to below two lines
+
+> git fetch origin master
+> git merge master(your local) origin/master(github)
+
+
+######## after forked and cloned
+#1 when you update on github and want to make same copy as on github 
+
+ 	> git pull origin master
+ 	first git will fetch repo from github to local and make another branch(origin/master) instead of your local branch(master) and then merge both the branches locally
+
+
+ 	##if there are conflict update then git will show conflict
+ 	then you have to resolve the conflict manually using editing your files
+
+
+#2 when you update local and want to sync 
+
+	> git push origin master
